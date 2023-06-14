@@ -87,6 +87,7 @@ pip3 install beautifulsoup4
 pip3 install unidecode
 pip3 install pendulum
 ```
+However I provide the [requirements.txt](scripts/requirements.txt) file in the depository.
 
 ### [Extract.py](scripts/extract.py)
 - firstly I import all the necesary libraries and modules for this part
