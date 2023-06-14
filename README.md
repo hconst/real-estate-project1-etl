@@ -22,7 +22,7 @@ In the picture below I displayed the data flow as well as technologies used. Fir
 ![architecture](images/DE_etl1_architecture.png)
 
 ### Data flow process
-- Every day at scheduled time Airflow [dag.py](scripts/etldag.py) triggers the first script [extract.py](scripts/extract.py) that extracts website content and saves it to S3 storage in CSV format. 
+- Every day at scheduled time Airflow [dag.py](scripts/dag.py) triggers the first script [extract.py](scripts/extract.py) that extracts website content and saves it to S3 storage in CSV format. 
 - There is a S3 Sensor in Airflow that detects when there is a new file in the S3 location for raw data, when that happens the next Airflow task is triggered which executes the [transform.py](scripts/transform.py). The transformation file cleans data and makes it more readable, useful and ready for loading to our database. 
 - After the execution of that script there is next Airflow task which is basically the same S3 Sensor, just in another folder. It detects a new file ready for loading to our database, when that happens that task triggers the last python file [load_db.py](scripts/load_db.py)
 - The last script [load_db.py](scripts/load_db.py) accesses data on S3 and loads it to PostgreSQL database.
