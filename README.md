@@ -129,8 +129,5 @@ As stated before I used the Looker for my visulization. As a tool Looker is free
 - I connected to my PostgreSQL server with my previously created domain and other login details
 - Then I selected my table from the database as data source, edited some columns such as the dump_date format to be able to use dates in my dashboard, or the region column to a geographical data, to be able to visualize location of the properties
 
-##### [CZ version](https://lookerstudio.google.com/reporting/d74b93f0-9af4-4752-b61a-fd4994d1e800)
-##### [EN version](https://lookerstudio.google.com/reporting/7d5bf233-9d02-4d1f-9745-a237e44bda96)
-
 ![EN dashboard](images/etl1_bi_dashboard.png)
 
